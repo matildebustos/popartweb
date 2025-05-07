@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>historia</title>
+<link href="estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	 <nav class="navbar">
+       <a href="index.html" class="logo">Pop Art</a>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="historia.html">Historia del Pop Art</a>
+            <a href="que-es.html">¿Qué es el Pop Art?</a>
+            <a href="obras.html">Obras Icónicas</a>
+            <a href="artistas.html">Artistas</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </nav>
+	
+
+  <main class="content-wrapper">
+    <div class="page-title">
+      <h1>Historia del Pop Art</h1>
+    </div>
+	  <br>
+	  <br>
+	  <br>
+	  
+		 <div class="slider">
+        <div class="slides">
+          <img src="imagenes/gal1.webp"  alt="Slide 1" class= "slide1"/>
+       
+          <img src="imagenes/gal2.jpg"  alt="Slide 2" class= "slide1"/>
+        
+          <img src="imagenes/gal3.webp"  alt="Slide 3" class= "slide1"/>
+       
+        
+          
+			
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+		 
+		 <script>
+			var slideIndex = 1;
+    showDivs(slideIndex);
+ 
+    function plusDivs(n) {
+    showDivs(slideIndex += n);
+    }
+ 
+    function showDivs(n) {
+        var i;
+ 
+        var x = document.getElementsByClassName("slide1");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+    }
+ 
+    carousel();
+ 
+    function carousel() {
+ 
+    var i;
+ 
+    var x = document.getElementsByClassName("slide1");
+ 
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+ 
+    slideIndex++;
+ 
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+ 
+    setTimeout(carousel, 2000); 
+ 
+    }
+  		</script>
+	  <br>
+	  
+    <div class="content-section">
+      <p>
+        El Pop Art surgió en la década de 1950 en Reino Unido y Estados Unidos, revolucionando el mundo del arte con su enfoque innovador y su inspiración en la cultura popular, la publicidad, los cómics y los objetos cotidianos. Este movimiento rompió con las tradiciones del arte elitista y acercó el arte a la vida diaria, utilizando imágenes reconocibles y colores vibrantes.
+      </p>
+		<br>
+      <p>
+        En Reino Unido, figuras como Richard Hamilton y Peter Blake fueron pioneros en el desarrollo del Pop Art, explorando temas relacionados con la sociedad de consumo y la influencia de los medios de comunicación. En Estados Unidos, Andy Warhol y Roy Lichtenstein llevaron el movimiento a nuevas alturas, utilizando técnicas como la serigrafía y el uso de imágenes de la cultura de masas.
+      </p>
+		<br>
+      <p>
+        El Pop Art no solo transformó la manera en que el arte era creado y percibido, sino que también influyó en el diseño gráfico, la moda, la música y la publicidad. Su legado sigue vigente, inspirando a nuevas generaciones de artistas y creativos en todo el mundo.
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="social-links">
+      <a href="#" class="social-icon">IG</a>
+    </div>
+    <p>Correo@ejemplo.com | © Saprel Pop Art</p>
+  </footer>
+</body>
+</html>
+
+	

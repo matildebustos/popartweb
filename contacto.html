@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>contcto.html</title>
+<link href="estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	 <nav class="navbar">
+        <a href="index.html" class="logo">Pop Art</a>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="historia.html">Historia del Pop Art</a>
+            <a href="que-es.html">¿Qué es el Pop Art?</a>
+            <a href="obras.html">Obras Icónicas</a>
+            <a href="artistas.html">Artistas</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </nav>
+	<main class="formulario-contacto">
+		<br>
+		<br>
+		<br>
+		<br>
+    <h1>¡Contactanos!</h1>
+    <form id="formulario" onsubmit="return validarFormulario()">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="pais">País:</label>
+      <select id="pais" name="pais" required>
+        <option value="">Selecciona un país</option>
+        <option value="argentina">Argentina</option>
+        <option value="mexico">México</option>
+        <option value="españa">España</option>
+        <option value="chile">Chile</option>
+        <option value="colombia">Colombia</option>
+      </select>
+
+      <label for="consulta">Consulta:</label>
+      <textarea id="consulta" name="consulta" rows="5" required></textarea>
+
+      <button type="submit">ENVIAR</button>
+    </form>
+  </main>
+	<footer class="footer">
+        <div class="social-links">
+            <a href="#" class="social-icon">IG</a>
+        </div>
+        <p>Correo@ejemplo.com | © Saprel Pop Art</p>
+    </footer>
+
+  <script>
+    function validarFormulario() {
+      const nombre = document.getElementById('nombre').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const pais = document.getElementById('pais').value;
+      const consulta = document.getElementById('consulta').value.trim();
+
+      if (!nombre || !email || !pais || !consulta) {
+        alert("Por favor completa todos los campos.");
+        return false;
+      }
+      alert("Formulario enviado correctamente.");
+      return true;
+    }
+  </script>
+</body>
+</html>

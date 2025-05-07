@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>que-es.html</title>
+<link href="estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	 <nav class="navbar">
+     <a href="index.html" class="logo">Pop Art</a>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="historia.html">Historia del Pop Art</a>
+            <a href="que-es.html">¿Qué es el Pop Art?</a>
+            <a href="obras.html">Obras Icónicas</a>
+            <a href="artistas.html">Artistas</a>
+            <a href="contacto.html">Contacto</a> 
+        </div>
+    </nav>
+	
+
+  <main class="content-wrapper">
+	  <main class="content-wrapper">
+		  <div class="page-title">
+    <h1>¿Qué es el Pop Art?</h1>
+  </div>
+
+  <!-- Galería arriba del texto -->
+  <section class="galeria-section">
+   
+    <div class="galeria">
+      <div class="imagen-galeria">
+        <img src="imagenes/ima1.jpg" alt="Descripción imagen 1">
+      </div>
+      <div class="imagen-galeria">
+        <img src="imagenes/ima3.webp" alt="Descripción imagen 2">
+      </div>
+      <div class="imagen-galeria">
+        <img src="imagenes/ima4.jpg" alt="Descripción imagen 3">
+      </div>
+		<div class="imagen-galeria">
+        <img src="imagenes/ima5.jpg" alt="Descripción imagen 2">
+      </div>
+		<div class="imagen-galeria">
+        <img src="imagenes/ima6.jpg" alt="Descripción imagen 2">
+      </div>
+    </div>
+  </section>
+
+  
+
+    <div class="content-section">
+      <p>
+        El Pop Art es un movimiento artístico que surgió en la década de 1950 y alcanzó su auge en los años 60. Se caracteriza por utilizar imágenes y temas provenientes de la cultura popular, como la publicidad, los cómics, el cine y los objetos cotidianos, transformándolos en arte.
+      </p>
+		<br>
+      <p>
+        Este movimiento rompió con las tradiciones del arte elitista y buscó acercar el arte a la vida cotidiana, empleando colores vibrantes, técnicas de reproducción en serie y un enfoque irónico y crítico hacia la sociedad de consumo.
+      </p>
+		<br>
+      <p>
+        El Pop Art cuestiona la distinción entre el arte “alto” y la cultura popular, celebrando la estética de los medios masivos y la cultura de masas. Artistas como Andy Warhol, Roy Lichtenstein, Richard Hamilton y Peter Blake son algunos de sus máximos exponentes.
+      </p>
+		<br>
+      <p>
+        Además de su impacto en la pintura y la escultura, el Pop Art influyó en el diseño gráfico, la moda, la música y la publicidad, dejando un legado que sigue vigente en la cultura visual contemporánea.
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="social-links">
+      <a href="#" class="social-icon">IG</a>
+    </div>
+    <p>Correo@ejemplo.com | © Saprel Pop Art</p>
+  </footer>
+	 <!-- Modal para ver imágenes grandes -->
+<div id="modal" class="modal">
+  <span class="cerrar" onclick="cerrarModal()">&times;</span>
+  <img class="modal-contenido" id="imgGrande">
+</div>
+	</main>
+	<script>
+  const imagenes = document.querySelectorAll(".imagen-galeria img");
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("imgGrande");
+
+  imagenes.forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+    });
+  });
+
+  function cerrarModal() {
+    modal.style.display = "none";
+  }
+
+  // Cierra modal si se hace clic fuera de la imagen
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>
+
+	
